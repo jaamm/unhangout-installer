@@ -6,6 +6,37 @@ Installation is fairly straightforward:
  * Load the Salt configuration to the server.
  * Run the installation.
 
+
+
+
+```
+$ brew install caskroom/cask/brew-cask
+$ brew cask install git vagrant virtualbox
+$ git clone https://github.com/thehunmonkgroup/unhangout-installer.git
+$ cd unhangout-installer/vagrant/
+$ cp settings.sh.example settings.sh
+$ cd ../salt/pillar/server
+$ cp development.sls.example development.sls
+``` 
+
+###### TODO: note config settings that need to be change 
+###### TODO: add the create a key
+###### TODO: point to the pub key within the config file 
+
+
+
+From the installer root directory cd into vagrant/
+
+```
+$ ./development-environment-init.sh
+```
+
+
+
+
+
+
+
 ## Initial configuration
 
  * In the <code>salt/pillar/server</code> directory, you'll find three example configuration files: one for development, one for production, and one for common settings across environments.
